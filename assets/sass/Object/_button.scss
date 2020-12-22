@@ -1,0 +1,14 @@
+.button {
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  &.bg-orange {
+    background: #f90;
+    color: #fff;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+}

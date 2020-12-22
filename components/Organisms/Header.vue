@@ -5,7 +5,11 @@
     </div>
 
     <div class="header__content">
-      <SearchBox width="275px" />
+      <SearchBox
+        @search="searchEvent"
+        width="275px"
+        iconEnabled
+      />
     </div>
 
     <div class="header__mobile">
@@ -25,6 +29,8 @@
     }
   })
   export default class Header extends Vue {
-    //
+    searchEvent(val: String) {
+      console.log(val);
+    }
   }
 </script>
