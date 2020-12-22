@@ -1,0 +1,26 @@
+.input-text {
+  width: 100%;
+  text-indent: 5px;
+  border: 1px #555 solid;
+  height: 30px;
+  box-sizing: border-box;
+
+  &.raund {
+    border-radius: 15px;
+  }
+
+  &.size {
+    &-small {
+      font-size: 12px;
+    }
+    &-large {
+      font-size: 15px;
+    }
+  }
+
+  &.bg-dark {
+    background: #555;
+    color: #bbb;
+  }
+
+}

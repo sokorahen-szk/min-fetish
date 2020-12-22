@@ -1,0 +1,59 @@
+/* header */
+.header {
+  background: #333;
+  display: flex;
+  justify-content: space-between;
+  height: 55px;
+  line-height: 55px;
+  position: relative;
+  color: #fff;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+      color: #666;
+      transition: all 500ms 0s ease;
+    }
+  }
+
+  &__title {
+    padding-left: 15px;
+  }
+
+  @include pc_tablet {
+    &__content {
+      padding-right: 15px;
+
+      .search-btn {
+        color: #f90;
+        position: absolute;
+        right: 30px;
+        width: 19px;
+        height: 19px;
+        font-size: 19px;
+        top: 2px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.5;
+        }
+
+      }
+    }
+    &__mobile {
+      display: none;
+    }
+  }
+
+  @include sp {
+    &__content {
+      display: none;
+    }
+    &__mobile {
+      display: block;
+    }
+  }
+
+}

@@ -1,0 +1,14 @@
+@mixin pc {
+  @media (min-width: 1050px) { @content; }
+}
+@mixin tablet {
+  @media (min-width:520px) and (max-width:1050px) { @content; }
+}
+@mixin sp {
+  @media (max-width:520px) { @content; }
+}
+
+@mixin pc_tablet {
+  @media (min-width: 1050px) { @content; }
+  @media (min-width:520px) and (max-width:1050px) { @content; }
+}
