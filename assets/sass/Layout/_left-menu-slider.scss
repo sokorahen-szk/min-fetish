@@ -46,5 +46,26 @@
     &__wrap {
       display: flex;
     }
+
+    &.hide {
+      width: 100%;
+      margin: 0;
+      .wrapper {
+        background: #fff;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        i {
+          font-size: 28px;
+        }
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
   }
 }
