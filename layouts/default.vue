@@ -1,6 +1,7 @@
 <template>
 	<div>
     <Header />
+		<Navigation />
 		<main>
 			<nuxt />
 		</main>
@@ -8,12 +9,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'nuxt-property-decorator';
 import Header from '~/components/Organisms/Header.vue';
+import Navigation from '~/components/Organisms/Navigation.vue';
 
 @Component({
 	components: {
-		Header
+		Header,
+		Navigation
 	}
 })
 export default class Default extends Vue {

@@ -1,0 +1,15 @@
+.left-menu-slider {
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: -1px -1px 4px #ccc inset;
+  width: 320px;
+  margin: 10px;
+  &__wrap {
+  }
+
+  &-title {
+    padding: 20px 15px 20px 15px;
+    border-bottom: 1px #ddd solid;
+  }
+
+}

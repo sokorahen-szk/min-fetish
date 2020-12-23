@@ -6,21 +6,21 @@
     class="input-text"
     :class="addClass"
     :style="addStyle"
-    :value="value"
-    @input="inputEvent"
+    v-model="value_"
+    @input="inputValue"
   />
 </template>
 
 <script lang="ts">
-  import { Component, Vue, Prop, Watch } from 'vue-property-decorator'
+  import { Component, Vue, Prop, Watch } from 'nuxt-property-decorator'
 
   @Component
   export default class InputBox extends Vue {
-    @Prop({ type: String, default: '' }) placeHolder: string;
-    @Prop({ type: String, default: 'name' }) name: string;
+    @Prop({ type: String, default: '' }) placeHolder: String;
+    @Prop({ type: String, default: 'name' }) name: String;
     @Prop({ type: Array, default: () => [] }) addClass: Array<String>;
-    @Prop({ type: String, default: () => [] }) width: string;
-    @Prop({ type: String }) value: string;
+    @Prop({ type: String, default: () => [] }) width: String;
+    @Prop({ type: String }) value: String;
 
     get addStyle(): String {
       return Vue.prototype.$addStyleParser({
@@ -28,8 +28,11 @@
       });
     }
 
-    inputEvent(e: InputEvent) {
-      return this.$emit('input', e.data);
+    private value_: String = this.$props.value;
+
+    inputValue() {
+      return this.$emit('input', this.value_)
     }
+
   }
 </script>

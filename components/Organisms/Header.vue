@@ -6,7 +6,7 @@
 
     <div class="header__content">
       <SearchBox
-        @search="searchEvent"
+        @search="keywordSearch"
         width="275px"
         iconEnabled
       />
@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-  import { Component, Vue } from 'vue-property-decorator'
+  import { Component, Vue } from 'nuxt-property-decorator'
   import SearchBox from '@/components/Molecules/SearchBox.vue';
 
   @Component({
@@ -29,8 +29,8 @@
     }
   })
   export default class Header extends Vue {
-    searchEvent(val: String) {
-      console.log(val);
+    keywordSearch(keywords: String) {
+      console.log(keywords);
     }
   }
 </script>

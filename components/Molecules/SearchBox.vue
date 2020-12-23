@@ -3,9 +3,10 @@
       <InputText
         name="search"
         placeholder="検索"
-        :addClass="['bg-dark']"
+        :addClass="['bg-dark', 'round']"
         :width="width"
-        :value="value"
+        v-model="keywords"
+        @input="inputValue"
       /><Button label="検索" width="auto" :addClass="['bg-orange']" @click="search" v-if="!iconEnabled" />
       <span class="search-btn" @click="search" v-if="iconEnabled">
         <i class="fas fa-search"></i>
@@ -15,7 +16,7 @@
 </template>
 
 <script lang="ts">
-  import { Component, Vue, Prop } from 'vue-property-decorator'
+  import { Component, Vue, Prop } from 'nuxt-property-decorator'
   import InputText from '@/components/Atoms/InputText.vue';
   import Button from '@/components/Atoms/Button.vue';
 
@@ -29,11 +30,14 @@
     @Prop({ type: String, default: '100%' }) width: string;
     @Prop({ type: Boolean, default: false }) iconEnabled: boolean;
 
-    private value: String = '';
+    private keywords: String = '';
 
     search() {
-      console.log(this.value)
-      return this.$emit('search', this.value)
+      return this.$emit('search', this.keywords)
+    }
+
+    inputValue(val: String) {
+      this.keywords = val;
     }
 
   }

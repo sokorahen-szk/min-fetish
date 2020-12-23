@@ -1,0 +1,45 @@
+.navigation {
+  background: #999;
+
+  @include pc_tablet {
+    &__wrap {
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+
+      li {
+        width: 150px;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+
+        &:last-child {
+          border-width: 0;
+        }
+
+        a {
+          color: #222;
+          text-decoration: none;
+          display: block;
+
+          &:hover {
+            color: #666;
+            border-bottom: 2px #ff4000 solid;
+          }
+        }
+
+      }
+
+    }
+    &-mobile {
+      display: none;
+    }
+  }
+
+  @include sp {
+    &-sp {
+      display: none;
+    }
+  }
+
+}

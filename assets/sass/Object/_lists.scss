@@ -1,0 +1,17 @@
+.lists {
+  list-style-type: none;
+  display: contents;
+  li {
+    border-bottom: 1px #ccc solid;
+    padding: 0;
+  }
+  a {
+    color: #222;
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+  }
+  a:hover {
+    color: #999;
+  }
+}

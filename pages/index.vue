@@ -1,13 +1,23 @@
 <template>
-  <div>
-    a
+  <div class="top">
+    <div class="top__wrap">
+      <LeftMenuSlider />
+      <div>aa</div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Component, Vue } from 'nuxt-property-decorator'
+import LeftMenuSlider from '@/components/Organisms/LeftMenuSlider.vue';
 
-export default Vue.extend({
+@Component({
   layout: 'default',
+  components: {
+    LeftMenuSlider
+  }
 })
+export default class Top extends Vue {
+  //
+}
 </script>
