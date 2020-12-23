@@ -1,5 +1,20 @@
 .top {
-  &__wrap {
-    display: flex;
+  @include pc {
+    &__wrap {
+      display: flex;
+    }
   }
+
+  @include tablet {
+    &__wrap {
+      display: block;
+    }
+  }
+
+  @include sp {
+    &__wrap {
+      display: block;
+    }
+  }
+
 }

@@ -2,7 +2,9 @@
   <div class="top">
     <div class="top__wrap">
       <LeftMenuSlider />
-      <div>aa</div>
+      <div>
+        a
+      </div>
     </div>
   </div>
 </template>

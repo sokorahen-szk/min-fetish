@@ -2,7 +2,7 @@
   <input
     type="text"
     :name="name"
-    :placeholder="placeHolder"
+    :placeholder="placeholder"
     class="input-text"
     :class="addClass"
     :style="addStyle"
@@ -16,7 +16,7 @@
 
   @Component
   export default class InputBox extends Vue {
-    @Prop({ type: String, default: '' }) placeHolder: String;
+    @Prop({ type: String, default: '' }) placeholder: String;
     @Prop({ type: String, default: 'name' }) name: String;
     @Prop({ type: Array, default: () => [] }) addClass: Array<String>;
     @Prop({ type: String, default: () => [] }) width: String;
