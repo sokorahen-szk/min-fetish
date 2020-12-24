@@ -1,6 +1,7 @@
 .top-content {
+  max-width: 1440px;
+
   &__wrap {
-    max-width: 1440px;
     &.row {
       display: -webkit-box;
       display: -ms-flexbox;

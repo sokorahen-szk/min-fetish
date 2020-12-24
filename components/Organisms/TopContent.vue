@@ -1,5 +1,6 @@
 <template>
   <div class="top-content">
+    <ThumbnailController />
     <div class="top-content__wrap row">
       <ThumbnailCard :thumbnail="thumbnail" />
       <ThumbnailCard :thumbnail="thumbnail" />
@@ -16,6 +17,7 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
 import ThumbnailCard from '@/components/Molecules/ThumbnailCard.vue';
+import ThumbnailController from '@/components/Molecules/ThumbnailController.vue';
 
 interface VideoAssessment {
   id: Number
@@ -34,7 +36,8 @@ interface ThumbnailContent {
 
 @Component({
   components: {
-    ThumbnailCard
+    ThumbnailCard,
+    ThumbnailController
   }
 })
 export default class TopContent extends Vue {
