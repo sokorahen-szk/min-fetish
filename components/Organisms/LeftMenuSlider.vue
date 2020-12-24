@@ -48,10 +48,11 @@ export default class LeftMenuSlider extends Vue {
     { id: 8, label: 'テストI', href: '#' },
   ];
 
-  private tagListToggle: Boolean = true;
+  private tagListToggle: Boolean = false;
 
   tagToggle() {
     this.tagListToggle = !this.tagListToggle;
   }
+
 }
 </script>
