@@ -41,11 +41,12 @@
   @include tablet {
     font-size: 13px;
     display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
 
     &-title {
       display: block;
-      height: 35px;
-      line-height: 35px;
+      padding: 8px 0;
       &-tag {
         padding-left: 10px;
       }
@@ -57,32 +58,20 @@
 
     li {
       width: auto;
-      white-space: nowrap;
+      white-space: wrap;
       text-align: center;
-      padding: 4px 0 4px 0;
+      margin-bottom: 4px;
 
       .tag {
+        min-width: 95px;
         display: inline-block;
         background:#fff;
         line-height: normal;
         font-size: 12px;
-        line-height: 32px;
-        height: 35px;
-        width: auto;
-        padding: 0 10px 0 0;
+        padding: 5px;
         box-sizing: border-box;
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
+        border-radius: 15px;
         border: 1px #ccc solid;
-        &:before {
-          content: '●';
-          color: #333;
-          font-size: 13px;
-          margin-right: 10px;
-          margin-left: 10px;
-          line-height: 0;
-          height: 35px;
-        }
       }
 
       &:after {
@@ -104,11 +93,13 @@
   @include sp {
     font-size: 13px;
     display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
 
     &-title {
       display: block;
-      height: 35px;
-      line-height: 35px;
+      margin: 8px 0;
       &-tag {
         padding-left: 10px;
       }
@@ -122,30 +113,19 @@
       width: auto;
       white-space: nowrap;
       text-align: center;
-      padding: 4px 0 4px 0;
+      margin-bottom: 4px;
 
       .tag {
+        min-width: 95px;
         display: inline-block;
         background:#fff;
         line-height: normal;
         font-size: 12px;
-        line-height: 32px;
-        height: 35px;
         width: auto;
-        padding: 0 10px 0 0;
+        padding: 5px;
         box-sizing: border-box;
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
+        border-radius: 15px;
         border: 1px #ccc solid;
-        &:before {
-          content: '●';
-          color: #333;
-          font-size: 13px;
-          margin-right: 10px;
-          margin-left: 10px;
-          line-height: 0;
-          height: 35px;
-        }
       }
 
       &:after {
