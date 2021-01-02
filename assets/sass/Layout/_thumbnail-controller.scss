@@ -1,7 +1,23 @@
 .thumbnail-controller {
   margin-top: 10px;
   padding: 5px;
+
+  &__box {
+      display: flex;
+      padding: 0 10px 0 10px;
+      &-left {
+        width: 50%;
+        line-height: 38px;
+      }
+      &-right {
+        width: 50%;
+        text-align: right;
+        line-height: 38px;
+      }
+  }
+
   &__inner {
     background: #fff;
+    height: 40px;
   }
 }

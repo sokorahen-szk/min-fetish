@@ -1,6 +1,7 @@
 .top-content {
-  max-width: 1440px;
-
+  @include pc {
+    margin-right: 10px;
+  }
   &__wrap {
     &.row {
       display: -webkit-box;

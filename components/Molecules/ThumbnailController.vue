@@ -1,7 +1,14 @@
 <template>
   <div class="thumbnail-controller">
     <div class="thumbnail-controller__inner">
-      <SelectBox name="video_times" :items="video_times" />
+      <div class="thumbnail-controller__box">
+        <div class="thumbnail-controller__box-left">
+          表示順：<SelectBox name="video_times" :items="video_times" />
+        </div>
+        <div class="thumbnail-controller__box-right">
+          件数：29,999
+        </div>
+      </div>
     </div>
   </div>
 </template>
