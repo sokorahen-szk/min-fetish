@@ -1,3 +1,5 @@
+$line_height: 2px;
+$line_width: 13px - 4px;
 
 .hamburger {
   width: 42px;
@@ -6,41 +8,40 @@
   cursor: pointer;
   position: relative;
   border-radius: 4px;
-  background: #444;
 
   &-line {
     position: absolute;
     transition: 0.3s;
-    width: calc(100% - 13px * 2);
-    height: 1px;
+    width: calc(100% - #{$line_width} * 2);
+    height: $line_height;
     background: #fff;
 
     &.top {
       top: 13px;
-      left: 13px;
+      left: $line_width;
     }
     &.middle {
-      top: calc(50% - 1px/2);
-      left: 13px;
+      top: calc(50% - #{$line_height}/2);
+      left: $line_width;
     }
     &.bottom {
       bottom: 13px;
-      left: 13px;
+      left: $line_width;
     }
   }
 
   &.active {
     .top {
-      top: calc(50% - 1px/2);
+      top: calc(50% - #{$line_height}/2);
       transform: rotate(45deg);
       }
     .middle {
       width: 0;
       height: 0;
-      left: 13px;
+      left: $line_width;
     }
     .bottom {
-      top: calc(50% - 1px/2);
+      top: calc(50% - #{$line_height}/2);
       transform: rotate(-45deg);
     }
   }

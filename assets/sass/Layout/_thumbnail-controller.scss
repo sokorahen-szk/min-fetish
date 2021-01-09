@@ -1,6 +1,6 @@
 .thumbnail-controller {
   margin-top: 10px;
-  padding: 5px;
+  padding: 0 5px 5px 5px;
 
   &__box {
       display: flex;
@@ -8,6 +8,18 @@
       &-left {
         width: 50%;
         line-height: 38px;
+        display: flex;
+        dl {
+          display: flex;
+          margin-right: 10px;
+          &:last-child {
+            margin: 0;
+          }
+          dt {
+            overflow-wrap: break-word;
+            white-space: nowrap;
+          }
+        }
       }
       &-right {
         width: 50%;

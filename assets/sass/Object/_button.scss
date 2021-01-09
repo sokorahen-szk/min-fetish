@@ -2,9 +2,15 @@
   text-align: center;
   border: 0;
   cursor: pointer;
-  &.bg-orange {
-    background: #f90;
-    color: #fff;
+  &.bg {
+    &-orange {
+      background: #f90;
+      color: #fff;
+    }
+    &-cyan {
+      background: #398FED;
+      color: #fff;
+    }
   }
 
   &:hover {

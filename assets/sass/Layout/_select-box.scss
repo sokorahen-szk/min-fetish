@@ -1,9 +1,10 @@
 .select-box {
   display: inline-block;
   width: 100%;
+  min-width: 150px;
 
   select {
-    width: 100%;
+    width: auto;
     height: 100%;
     cursor: pointer;
     text-indent: 5px;

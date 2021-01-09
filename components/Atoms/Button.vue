@@ -3,6 +3,7 @@
     class="button"
     :style="addStyle"
     :class="addClass"
+    @click="clickEvent"
   >
   {{ label }}
   </button>
@@ -23,6 +24,10 @@
         'width': `${this.width}`,
         'height': `${this.height}`
       });
+    }
+
+    clickEvent(e: Event): this {
+      return this.$emit('click', e);
     }
   }
 </script>

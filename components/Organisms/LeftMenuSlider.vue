@@ -25,13 +25,13 @@ interface List {
 @Component
 export default class LeftMenuSlider extends Vue {
   private items: Array<List> = [
-    { id: 1, label: 'フェラティオ', href: '#' },
-    { id: 2, label: '中太し', href: '#' },
-    { id: 3, label: '騎乗食', href: '#' },
+    { id: 1, label: 'ティオ', href: '#' },
+    { id: 2, label: '太し', href: '#' },
+    { id: 3, label: '乗食', href: '#' },
     { id: 4, label: 'NTR', href: '#' },
-    { id: 5, label: '窒息プレイ', href: '#' },
-    { id: 6, label: 'コスプレSOX', href: '#' },
-    { id: 7, label: '種着プレス', href: '#' },
+    { id: 5, label: '息プレイ', href: '#' },
+    { id: 6, label: 'コスプレ', href: '#' },
+    { id: 7, label: '着プレ', href: '#' },
     { id: 8, label: 'テストI', href: '#' },
   ];
 
