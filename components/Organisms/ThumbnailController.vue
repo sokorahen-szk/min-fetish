@@ -18,6 +18,7 @@
                 :addClass="['bg-cyan']"
                 @click="selectSite"
               />
+              <PopModal />
             </dt>
           </dl>
         </div>
@@ -33,11 +34,13 @@
 import { Component, Vue } from 'nuxt-property-decorator';
 import SelectBox from '@/components/Molecules/SelectBox.vue';
 import Button from '@/components/Atoms/Button.vue';
+import PopModal from '@/components/Organisms/PopModal.vue';
 
 @Component({
   components: {
     SelectBox,
     Button,
+    PopModal
   }
 })
 export default class ThumbnailController extends Vue {

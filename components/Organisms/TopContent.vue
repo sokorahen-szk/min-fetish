@@ -17,7 +17,7 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
 import ThumbnailCard from '@/components/Molecules/ThumbnailCard.vue';
-import ThumbnailController from '@/components/Molecules/ThumbnailController.vue';
+import ThumbnailController from '@/components/Organisms/ThumbnailController.vue';
 
 interface VideoAssessment {
   id: Number

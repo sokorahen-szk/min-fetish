@@ -1,0 +1,33 @@
+.pop-modal {
+  position: relative;
+  visibility: hidden;
+
+  &__inner {
+    background: #ddd;
+    position: absolute;
+    z-index: 1111;
+    width: 350px;
+    height: 300px;
+    .inner {
+      &__wrap {
+        padding: 2px 10px 2px 10px;
+      }
+      &__header {
+        text-align: right;
+      }
+    }
+
+    .close-btn {
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+  }
+
+  &.active {
+    visibility: visible;
+  }
+
+}
