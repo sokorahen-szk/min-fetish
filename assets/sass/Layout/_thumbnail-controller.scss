@@ -2,7 +2,8 @@
   margin-top: 10px;
   padding: 0 5px 5px 5px;
 
-  &__box {
+  @include pc_tablet {
+    &__box {
       display: flex;
       padding: 0 10px 0 10px;
       &-content {
@@ -21,10 +22,25 @@
           }
         }
       }
+    }
+    &__inner {
+      background: #fff;
+      height: 40px;
+    }
+    &-mobile {
+      display: none;
+    }
   }
 
-  &__inner {
-    background: #fff;
-    height: 40px;
+  @include sp {
+    &__box {
+      display: none;
+    }
+
+    &-mobile {
+      display: block;
+    }
+
   }
+
 }

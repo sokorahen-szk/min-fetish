@@ -1,20 +1,15 @@
-# apps
-
-## Build Setup
-
-```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+# サイト名
+みんなのフェチ動画
+# 概要
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+自分が好きなエロ動画を紹介して、フェチな趣味同士繋がるためのプラットフォーム。
+PornHubやXVideosなどのアダルト動画サイトURLをカテゴリをつけて投稿するだけ。好きなフェチ動画をお気に入り登録し、
+自分だけのフェチ動画を作ろう。
+```
+# 技術スタック
+- Nuxt.js
+- SCSS
+- Typescript
+- Firebase Authentication
+- Firebase Cloud Firestore
+- Firebase Cloud Storage

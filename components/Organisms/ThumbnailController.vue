@@ -26,6 +26,9 @@
         </div>
       </div>
     </div>
+    <div class="thumbnail-controller-mobile">
+        a
+    </div>
   </div>
 </template>
 

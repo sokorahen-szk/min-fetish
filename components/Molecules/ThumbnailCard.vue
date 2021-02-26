@@ -1,5 +1,6 @@
 <template>
-  <div class="thumbnail-card card">
+  <div class="thumbnail-card card" ref="card">
+    <template v-if="item && !disabled">
     <div class="thumbnail-card__inner">
       <div class="card-img">
         <a :href="item.url"><img :src="item.imgSrc" :alt="item.alt" /></a>
@@ -12,14 +13,15 @@
         <div class="info">
           {{ changeDateToJapaneseText() }}
           <a href="#">{{ item.author.username }}</a>
-          閲覧数：{{ item.views }}
+          <p>{{ item.views }} 閲覧数</p>
         </div>
         <div class="status">
-          <a href="#" class="fa-wrap green"><i class="fas fa-thumbs-up"></i><span class="counter">0</span></a>
-          <a href="#" class="fa-wrap red"><i class="fas fa-thumbs-down"></i><span class="counter">0</span></a>
+          <a href="#" class="fa-wrap green"><i class="fas fa-thumbs-up"></i><span class="counter">{{ item.status.good }}</span></a>
+          <a href="#" class="fa-wrap red"><i class="fas fa-thumbs-down"></i><span class="counter">{{ item.status.bad }}</span></a>
         </div>
       </div>
     </div>
+    </template>
   </div>
 </template>
 
@@ -51,7 +53,9 @@ interface ThumbnailContent {
 
 @Component
 export default class TopContent extends Vue {
-  @Prop(Object) item: ThumbnailContent
+  @Prop({ type: Object, default: () => {} }) item: ThumbnailContent;
+  @Prop({ type: Boolean, default: false }) disabled: Boolean;
+  private enabled: Boolean = true;
 
   private changeDateToJapaneseText() :String {
     return Vue.prototype.$dateParser(this.item.uploadDate, '前');

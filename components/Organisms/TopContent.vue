@@ -5,6 +5,9 @@
       <template v-for="item in data">
         <ThumbnailCard :item="item" :key="`thumbnail-card-${item.id}`" />
       </template>
+      <template v-for="i in loopCount()">
+          <ThumbnailCard :key="`thumbnail-card-dummy-${i}`" disabled />
+      </template>
     </div>
   </div>
 </template>
@@ -57,16 +60,93 @@ export default class TopContent extends Vue {
       genre: 'pornhub',
       status: {
         id: 1,
+        good: 24,
+        bad: 2
+      },
+      views: 3250,
+      uploadDate: new Date('2020-02-21')
+    },
+    {
+      id: 2,
+      imgSrc: 'https://natgeo.nikkeibp.co.jp/atcl/photo/16/b/091400038/ph_thumb.jpg',
+      url: '#',
+      author: {
+        id: 1,
+        username: 'ysuzuki'
+      },
+      alt: 'リスのたわむれ',
+      genre: 'pornhub',
+      status: {
+        id: 1,
         good: 0,
         bad: 0
       },
       views: 3250,
       uploadDate: new Date('2020-02-21')
-    }
+    },
+    {
+      id: 3,
+      imgSrc: 'https://natgeo.nikkeibp.co.jp/atcl/photo/16/b/091400038/ph_thumb.jpg',
+      url: '#',
+      author: {
+        id: 1,
+        username: 'ysuzuki'
+      },
+      alt: 'リスのたわむれ',
+      genre: 'pornhub',
+      status: {
+        id: 1,
+        good: 0,
+        bad: 0
+      },
+      views: 3250,
+      uploadDate: new Date('2020-02-21')
+    },
+    {
+      id: 4,
+      imgSrc: 'https://natgeo.nikkeibp.co.jp/atcl/photo/16/b/091400038/ph_thumb.jpg',
+      url: '#',
+      author: {
+        id: 1,
+        username: 'ysuzuki'
+      },
+      alt: 'リスのたわむれ',
+      genre: 'pornhub',
+      status: {
+        id: 1,
+        good: 0,
+        bad: 0
+      },
+      views: 3250,
+      uploadDate: new Date('2020-02-21')
+    },
+    {
+      id: 5,
+      imgSrc: 'https://natgeo.nikkeibp.co.jp/atcl/photo/16/b/091400038/ph_thumb.jpg',
+      url: '#',
+      author: {
+        id: 1,
+        username: 'ysuzuki'
+      },
+      alt: 'リスのたわむれ',
+      genre: 'pornhub',
+      status: {
+        id: 1,
+        good: 0,
+        bad: 0
+      },
+      views: 3250,
+      uploadDate: new Date('2020-02-21')
+    },
   ];
 
-  mounted() {
-    console.log(document.querySelectorAll(".top-content__wrap .card").length)
+  private loopCount(): number {
+    let counter = 0;
+    while ( (this.data.length + counter) % 3 !== 0) {
+      counter++;
+    }
+    return counter;
   }
+
 }
 </script>

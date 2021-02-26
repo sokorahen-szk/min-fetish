@@ -24,7 +24,7 @@
   @Component
   export default class PopModal extends Vue {
 
-    public isOpen: Boolean = true;
+    public isOpen: Boolean = false;
 
     private close() :void {
       this.isOpen = false;
