@@ -27,6 +27,7 @@
     }
 
     clickEvent(e: Event): this {
+      console.log("A")
       return this.$emit('click', e);
     }
   }

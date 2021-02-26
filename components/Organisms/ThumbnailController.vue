@@ -2,7 +2,7 @@
   <div class="thumbnail-controller">
     <div class="thumbnail-controller__inner">
       <div class="thumbnail-controller__box">
-        <div class="thumbnail-controller__box-left">
+        <div class="thumbnail-controller__box-content">
           <dl>
             <dt>表示順：</dt>
             <dd><SelectBox name="video_times" :items="video_times" /></dd>
@@ -18,12 +18,11 @@
                 :addClass="['bg-cyan']"
                 @click="selectSite"
               />
-              <PopModal />
+              <PopModal ref="popModal">
+                チェックリスト
+              </PoPModal>
             </dt>
           </dl>
-        </div>
-        <div class="thumbnail-controller__box-right">
-          件数：29,999
         </div>
       </div>
     </div>
@@ -31,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator';
+import { Component, Vue, Ref } from 'nuxt-property-decorator';
 import SelectBox from '@/components/Molecules/SelectBox.vue';
 import Button from '@/components/Atoms/Button.vue';
 import PopModal from '@/components/Organisms/PopModal.vue';
@@ -44,6 +43,9 @@ import PopModal from '@/components/Organisms/PopModal.vue';
   }
 })
 export default class ThumbnailController extends Vue {
+
+  @Ref() popModal: PopModal;
+
   private video_times: Array<any> = [
     { label: "すべて", value: "1" },
     { label: "5分", value: "2" },
@@ -58,7 +60,7 @@ export default class ThumbnailController extends Vue {
   ];
 
   selectSite(e: Event) :void {
-    console.log(e)
+    this.popModal.isOpen = !this.popModal.isOpen;
   }
 }
 </script>

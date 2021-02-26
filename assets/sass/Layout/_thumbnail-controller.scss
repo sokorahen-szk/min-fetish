@@ -5,7 +5,7 @@
   &__box {
       display: flex;
       padding: 0 10px 0 10px;
-      &-left {
+      &-content {
         width: 50%;
         line-height: 38px;
         display: flex;
@@ -20,11 +20,6 @@
             white-space: nowrap;
           }
         }
-      }
-      &-right {
-        width: 50%;
-        text-align: right;
-        line-height: 38px;
       }
   }
 

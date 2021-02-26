@@ -70,13 +70,13 @@
         font-size: 12px;
         padding: 5px;
         box-sizing: border-box;
-        border-radius: 15px;
+        border-radius: 5px;
         border: 1px #ccc solid;
       }
 
       &:before {
         content: '';
-        margin-right: 15px;
+        margin-right: 5px;
       }
     }
 
@@ -124,13 +124,13 @@
         width: auto;
         padding: 5px;
         box-sizing: border-box;
-        border-radius: 15px;
+        border-radius: 5px;
         border: 1px #ccc solid;
       }
 
       &:before {
         content: '';
-        margin-right: 15px;
+        margin-right: 5px;
       }
     }
 

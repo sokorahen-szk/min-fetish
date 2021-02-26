@@ -37,7 +37,6 @@
 
   @include tablet {
     width: 100%;
-    overflow: scroll;
     &__wrap {
       display: flex;
     }
@@ -45,7 +44,7 @@
 
   @include sp {
     width: 100%;
-    overflow: scroll;
+    display: none;
     &__wrap {
       display: flex;
     }

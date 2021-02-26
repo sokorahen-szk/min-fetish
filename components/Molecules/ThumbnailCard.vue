@@ -2,15 +2,17 @@
   <div class="thumbnail-card card">
     <div class="thumbnail-card__inner">
       <div class="card-img">
-        <a :href="thumbnail.url"><img :src="thumbnail.imgSrc" :alt="thumbnail.alt" /></a>
-        <div class="card-img__genre"><div :class="thumbnail.genre"></div></div>
+        <a :href="item.url"><img :src="item.imgSrc" :alt="item.alt" /></a>
+        <div class="card-img__genre"><div :class="item.genre"></div></div>
       </div>
       <div class="thumbnail-card__title">
-        <a href="#">adddd</a>
+        <a :href="item.url">{{ item.alt }}</a>
       </div>
       <div class="thumbnail-card__footer">
-        <div class="time">
-          今日
+        <div class="info">
+          {{ changeDateToJapaneseText() }}
+          <a href="#">{{ item.author.username }}</a>
+          閲覧数：{{ item.views }}
         </div>
         <div class="status">
           <a href="#" class="fa-wrap green"><i class="fas fa-thumbs-up"></i><span class="counter">0</span></a>
@@ -30,17 +32,30 @@ interface VideoAssessment {
   bad: Number
 }
 
+interface User {
+  id: Number
+  username: String
+}
+
 interface ThumbnailContent {
   id: Number
   imgSrc: String
   alt: String
   url: String
+  author: User
   genre: String
   status: VideoAssessment
+  views: Number
+  uploadDate: Date
 }
 
 @Component
 export default class TopContent extends Vue {
-  @Prop(Object) thumbnail: ThumbnailContent
+  @Prop(Object) item: ThumbnailContent
+
+  private changeDateToJapaneseText() :String {
+    return Vue.prototype.$dateParser(this.item.uploadDate, '前');
+  }
+
 }
 </script>

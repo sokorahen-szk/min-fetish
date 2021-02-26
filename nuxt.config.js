@@ -26,6 +26,7 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src: '@/plugins/add-style-parser' },
+    { src: '@/plugins/date-parser' },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -35,6 +36,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    '@nuxtjs/moment',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -43,5 +45,9 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+  },
+
+  moment: {
+    locales: ['ja']
   }
 }

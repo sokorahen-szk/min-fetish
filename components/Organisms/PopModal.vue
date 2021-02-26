@@ -6,8 +6,11 @@
           <div class="inner__header">
             <i
               class="fas fa-times close-btn"
-              @click="close"
+              @click="close()"
             ></i>
+          </div>
+          <div class="inner_content">
+            <slot></slot>
           </div>
         </div>
       </div>
@@ -21,7 +24,7 @@
   @Component
   export default class PopModal extends Vue {
 
-    private isOpen: Boolean = true;
+    public isOpen: Boolean = true;
 
     private close() :void {
       this.isOpen = false;
