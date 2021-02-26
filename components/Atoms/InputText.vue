@@ -12,19 +12,21 @@
 </template>
 
 <script lang="ts">
-  import { Component, Vue, Prop, Watch } from 'nuxt-property-decorator'
+  import { Component, Vue, Prop } from 'nuxt-property-decorator'
 
   @Component
   export default class InputBox extends Vue {
     @Prop({ type: String, default: '' }) placeholder: String;
     @Prop({ type: String, default: 'name' }) name: String;
     @Prop({ type: Array, default: () => [] }) addClass: Array<String>;
-    @Prop({ type: String, default: () => [] }) width: String;
+    @Prop({ type: String, default: '100%' }) width: String;
+    @Prop({ type: String, default: '30px' }) height: String;
     @Prop({ type: String }) value: String;
 
     get addStyle(): String {
       return Vue.prototype.$addStyleParser({
-        'width': `${this.width}`
+        'width': `${this.width}`,
+        'height': `${this.height}`,
       });
     }
 

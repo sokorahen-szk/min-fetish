@@ -27,7 +27,11 @@
       </div>
     </div>
     <div class="thumbnail-controller-mobile">
-        a
+      <SearchBox
+        :addClass="[]"
+        height="45px"
+        topMobile
+      />
     </div>
   </div>
 </template>

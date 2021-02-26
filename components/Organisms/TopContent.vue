@@ -16,6 +16,7 @@
 import { Component, Vue } from 'nuxt-property-decorator';
 import ThumbnailCard from '@/components/Molecules/ThumbnailCard.vue';
 import ThumbnailController from '@/components/Organisms/ThumbnailController.vue';
+import SearchBox from '@/components/Molecules/SearchBox.vue';
 
 interface VideoAssessment {
   id: Number
@@ -43,7 +44,8 @@ interface ThumbnailContent {
 @Component({
   components: {
     ThumbnailCard,
-    ThumbnailController
+    ThumbnailController,
+    SearchBox
   }
 })
 export default class TopContent extends Vue {
