@@ -6,6 +6,7 @@
     class="input-text"
     :class="addClass"
     :style="addStyle"
+    :autocomplete="autocomplete ? 'on' : 'off'"
     v-model="value_"
     @input="inputValue"
   />
@@ -22,6 +23,7 @@
     @Prop({ type: String, default: '100%' }) width: String;
     @Prop({ type: String, default: '30px' }) height: String;
     @Prop({ type: String }) value: String;
+    @Prop({ type: Boolean, default: false }) autocomplete: Boolean;
 
     get addStyle(): String {
       return Vue.prototype.$addStyleParser({

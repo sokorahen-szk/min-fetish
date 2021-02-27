@@ -19,8 +19,31 @@
                 @click="selectSite"
               />
               <PopModal ref="popModal">
-                チェックリスト
+                <div class="target-site">
+                  対象サイト選択
+                  <ul>
+                    <li><SelectSiteLogo tag="search_select_pornhub" label="pornhub" /></li>
+                    <li><SelectSiteLogo tag="search_select_xvideos" label="xvideos" /></li>
+                    <li><SelectSiteLogo tag="search_select_xhamster" label="xhamster" /></li>
+                    <li></li>
+                  </ul>
+                  <div>
+                    <Button
+                      label="閉じる"
+                      :addClass="['bg-gray']"
+                      @click="selectSite"
+                    />
+                  </div>
+                </div>
               </PoPModal>
+            </dt>
+          </dl>
+          <dl>
+            <dt>
+              <Button
+                label="検索"
+                :addClass="['bg-orange']"
+              />
             </dt>
           </dl>
         </div>
@@ -41,12 +64,14 @@ import { Component, Vue, Ref } from 'nuxt-property-decorator';
 import SelectBox from '@/components/Molecules/SelectBox.vue';
 import Button from '@/components/Atoms/Button.vue';
 import PopModal from '@/components/Organisms/PopModal.vue';
+import SelectSiteLogo from '@/components/Molecules/SelectSiteLogo.vue';
 
 @Component({
   components: {
     SelectBox,
     Button,
-    PopModal
+    PopModal,
+    SelectSiteLogo,
   }
 })
 export default class ThumbnailController extends Vue {

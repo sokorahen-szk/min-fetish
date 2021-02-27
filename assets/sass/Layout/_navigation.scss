@@ -1,17 +1,16 @@
 .navigation {
-  background: #999;
+  background: #fff;
 
   @include pc_tablet {
     &__wrap {
       display: flex;
       justify-content: center;
-      padding: 5px;
 
       li {
         width: 150px;
         text-align: center;
-        height: 30px;
-        line-height: 30px;
+        height: 35px;
+        line-height: 35px;
 
         &:last-child {
           border-width: 0;

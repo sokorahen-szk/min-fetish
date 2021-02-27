@@ -43,4 +43,15 @@
 
   }
 
+  .target-site {
+    padding: 12px;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    li {
+      width: 50%;
+    }
+  }
+
 }

@@ -1,0 +1,9 @@
+.check-box {
+    padding: 2px;
+    input.large {
+        transform: scale(1.4);
+        -ms-transform: scale(1.4, 1.4);
+        -webkit-transform: scale(1.4, 1.4);
+        transform: scale(1.4, 1.4);
+    }
+}
