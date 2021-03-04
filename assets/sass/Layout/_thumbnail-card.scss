@@ -3,10 +3,23 @@
     flex: 25%;
     min-width: 225px;
     padding: 5px;
+
+    img {
+      height: 195px;
+      max-height: 195px;
+    }
+
   }
   @include sp {
     flex: 45%;
     padding: 5px;
+
+    img {
+      height: 150px;
+      max-height: 150px;
+    }
+
+
   }
 
   &__inner {
@@ -59,8 +72,6 @@
 
   img {
     width: 100%;
-    height: 150px;
-    max-height: 150px;
     vertical-align: bottom;
     transition:1s all;
 
