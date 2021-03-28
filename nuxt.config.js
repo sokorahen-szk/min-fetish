@@ -49,5 +49,7 @@ export default {
 
   moment: {
     locales: ['ja']
-  }
+  },
+
+  serverMiddleware: ['~/api/route'],
 }
