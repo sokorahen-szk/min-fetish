@@ -13,6 +13,10 @@ app.use(express.json())
 // for parsing application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }))
 
+/**
+ * ビデオ
+ * GET /api/list/video ビデオ一覧取得
+ */
 app.use('/api/list', listVideo);
 
 export default app
